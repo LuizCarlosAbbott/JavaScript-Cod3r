@@ -33,8 +33,13 @@ function appJS() {
 
 function appIMG() {
   return gulp
-    .src("src/assets/imgs/**/*.png")
+    .src("src/assets/imgs/**/*.*")
     .pipe(gulp.dest("build/assets/imgs"));
 }
+
+gulp.task("appHTML", appHTML);
+gulp.task("appCSS", appCSS);
+gulp.task("appJS", appJS);
+gulp.task("appIMG", appIMG);
 
 module.exports = { appHTML, appCSS, appJS, appIMG };
