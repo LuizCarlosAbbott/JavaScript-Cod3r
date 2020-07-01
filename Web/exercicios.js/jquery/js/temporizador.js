@@ -54,6 +54,8 @@
         minutoUnidade.html(diferenca[2][1]);
         segundoDezena.html(diferenca[3][0]);
         segundoUnidade.html(diferenca[3][1]);
+      } else {
+        clearInterval(temporizador);
       }
     }, 1000);
 
