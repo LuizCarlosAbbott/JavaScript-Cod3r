@@ -1,11 +1,7 @@
 <template>
   <div class="pill">
-    <span class="name">
-      {{ name }}
-    </span>
-    <span class="amount">
-      {{ amount }}
-    </span>
+    <span class="name">{{ name }}</span>
+    <span class="amount">{{ amount }}</span>
   </div>
 </template>
 

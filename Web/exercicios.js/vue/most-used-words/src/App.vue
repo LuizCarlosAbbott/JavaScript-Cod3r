@@ -3,10 +3,9 @@
     <v-app-bar app color="primary" dark>
       <v-toolbar-title>Most Used Words</v-toolbar-title>
     </v-app-bar>
-
-    <v-content>
+    <v-main>
       <Home />
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 
