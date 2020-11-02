@@ -3,6 +3,7 @@ version: "3"
 services:
   postgres:
     image: postgres:12
+    container_name: "javascript-cod3r_postgres"
     environment:
       POSTGRES_PASSWORD: postgres
     ports:
@@ -12,9 +13,23 @@ services:
     networks:
       - postgres-network
 
+  mongodb:
+    image: mongo:4.0.4
+    container_name: "javascript-cod3r_mongodb"
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - mongodb:/var/lib/mongodb/data
+    ports:
+      - 27017:27017
+    command: mongod --smallfiles --logpath=/dev/null
+
 networks:
   postgres-network:
     driver: bridge
 volumes:
   postgres:
+    driver: local
+  mongodb:
     driver: local
